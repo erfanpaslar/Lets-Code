@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="eel.js"></script>
+    <title>Let's Eel</title>
+  </head>
+
+  <body>
+    <h1>Let's Eel</h1>
+    <h4>Send data to python</h4>
+    <div class="formJsToPy">
+      <input class="textInput" type="text" id="theFirstInput" />
+      <input
+        class="buttonInput"
+        type="button"
+        onclick="SendDataToPython()"
+        value="Send"
+        id="theBtn"
+      />
+    </div>
+
+    <hr />
+    <h4>Getting data from Python</h4>
+    <div class="formJsToPy">
+      <input
+        class="buttonInput"
+        type="button"
+        onclick="getDataFromPython()"
+        value="Get From Python"
+        id="theBtnGet"
+      />
+    </div>
+    <p id="showDataFromPython"></p>
+
+    <hr />
+    <h4>Type here and see the python output terminal</h4>
+    <div class="formJsToPy">
+      <input class="textInput" type="text" id="theSecondInput" />
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
